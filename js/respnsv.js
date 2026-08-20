@@ -182,7 +182,7 @@
         });
       });
       });
-      /* S */
+      /* Selecciona los cards botones que hay presionados en los elementos */
       document.querySelectorAll('.aderezo-chip').forEach(chip => {
         chip.addEventListener('click', function () {
           const group = this.closest('.aderezo-group');

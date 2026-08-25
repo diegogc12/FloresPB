@@ -4,9 +4,10 @@
         const confirmBtn = document.getElementById('confirmOrder');
         let metodoPedido = "";
         // Elementos para manejo de método de pedido
-        const btnMostrador = document.getElementById("btnMostrador");
+
+       // const btnMostrador = document.getElementById("btnMostrador");
         const btnDomicilio = document.getElementById("btnDomicilio");
-        const formMostrador = document.getElementById("formMostrador");
+   //     const formMostrador = document.getElementById("formMostrador");
         const formDomicilio = document.getElementById("formDomicilio");
         const inputAdicional = document.querySelectorAll('.item-extras');
         
@@ -14,25 +15,41 @@
         //Variables para sumar dobes carnes o restar carnes
         
 
-        btnMostrador.addEventListener("click", () => {
-            metodoPedido = "Mostrador";
+       // btnMostrador.addEventListener("click", () => {
+           // metodoPedido = "Mostrador";
 
-            formMostrador.classList.remove("d-none");
-            formDomicilio.classList.add("d-none");
+           // formMostrador.classList.remove("d-none");
+           // formDomicilio.classList.add("d-none");
 
-            btnMostrador.classList.add("btn-rosa");
-            btnDomicilio.classList.remove("btn-rosa");
-        });
+          //  btnMostrador.classList.add("btn-rosa");
+          //  btnDomicilio.classList.remove("btn-rosa");
+      //  });
+
+      // Genera evento click para BtnDOmicilio SI el cliente quiere Ordenar
 
         btnDomicilio.addEventListener("click", () => {
+          // Botón de Formulario de Pedidos
+          if (metodoPedido =="Domicilio") {
+            // Si 
+            formDomicilio.classList.add("d-none");
+            // Le quito el atributo rosa al Botón de Pedido
+            btnDomicilio.classList.remove("btn-rosa");
+
+            metodoPedido = "";
+          }
+          else {
             metodoPedido = "Domicilio";
 
+
             formDomicilio.classList.remove("d-none");
-            formMostrador.classList.add("d-none");
+           // formMostrador.classList.add("d-none");
 
             btnDomicilio.classList.add("btn-rosa");
-            btnMostrador.classList.remove("btn-rosa");
-        });
+           // btnMostrador.classList.remove("btn-rosa");
+
+          }
+          });
+
 
         // Ingredientes adicionales click
       document.querySelectorAll('.ingredient-chip').forEach(chip => {
@@ -127,6 +144,9 @@
           updateTotal();
         }); 
 
+
+        // Botones de Suma y Resta a Ingredientes Extra
+        // Control de Elementos de Cantidad de Ingredientes Adicionales
         group.querySelectorAll('.chip-ctrl').forEach(ctrl => {
           ctrl.addEventListener('click', function (e) {
             e.stopPropagation();
@@ -153,6 +173,8 @@
           });
         });
 
+
+        // Evento Click para suma de Carnes Adicionales a las Carnes
         group.querySelectorAll('.carne-ctrl').forEach(ctrl => {
         ctrl.addEventListener('click', function (e) {
           e.stopPropagation();
@@ -182,6 +204,8 @@
         });
       });
       });
+
+
       /* Selecciona los cards botones que hay presionados en los elementos */
       document.querySelectorAll('.aderezo-chip').forEach(chip => {
         chip.addEventListener('click', function () {
@@ -202,6 +226,9 @@
         });
       });
 
+
+      // Evento CLick Encargado de sumar cuando se selecciona un producto
+      // Evento CLick para Botones de Suma y Resta de Cantidad de Botones
       document.querySelectorAll('.qty-btn').forEach(btn => {
         btn.addEventListener('click', function() {
           const input = this.parentElement.querySelector('.qty-input');
@@ -219,6 +246,8 @@
         qtyInputs.forEach(input => {
         input.addEventListener('input', updateTotal);
       });
+
+
         // Manejo del envío del pedido
       confirmBtn.addEventListener('click', function () {
         let orderSummary = [];

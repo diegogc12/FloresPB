@@ -49,7 +49,7 @@
       .micro-label {
         margin: 0;
         color: var(--accent);
-        font-size: 0.72rem;
+        font-size: 14px !important;
         font-weight: 700;
         letter-spacing: 0.16em;
         text-transform: uppercase;
@@ -99,10 +99,12 @@
       }
 
       .section-titlepromo {
+        font-family: 'Playfair Display' !important;
         max-width: 16ch;
         margin: 0.45rem 0 0;
-        font-size: clamp(1.8rem, 4.6vw, 3.45rem);
-        font-weight: 600;
+        padding-left: 40px;
+        font-size: 34px;
+        font-weight: 800;
         letter-spacing: -0.045em;
         line-height: 1.03;
       }
@@ -116,6 +118,7 @@
       }
 
       .carousel-shell {
+        display: flex;
         overflow: hidden;
         border: 1px solid var(--line);
         border-radius: var(--radius-lg);
@@ -441,8 +444,10 @@
         right: 1rem;
         bottom: 1rem;
         left: 1rem;
-        font-size: clamp(1.2rem, 3vw, 2.4rem);
+        color: black;
+        font-size: 30px;
         font-weight: 600;
+        font-family: 'Playfair Display';
         letter-spacing: -0.035em;
       }
 
@@ -451,7 +456,9 @@
         padding: clamp(1.4rem, 4vw, 3rem);
         border: 1px solid var(--line);
         border-radius: var(--radius-lg);
-        background: var(--surface);
+          background:
+    linear-gradient(115deg, rgb(169 215 176 / 54%), rgb(47 45 45 / 92%)), 
+    url(../pics/bckgMota.png) center / cover;
       }
 
       .sticky-stage-inner {
@@ -460,7 +467,6 @@
       }
 
       .sticky-number {
-        font-family: 'Playfair Display';
         margin: 0 0 1rem;
         color: var(--accent);
         font-size: clamp(4.5rem, 10vw, 7rem);
@@ -474,12 +480,15 @@
         font-size: clamp(1.55rem, 3vw, 2.5rem);
         font-weight: 600;
         letter-spacing: -0.04em;
+        font-family: 'Playfair Display';
+        color: black;
       }
 
       .sticky-stage p {
         max-width: 32rem;
         margin: 0;
-        color: var(--muted);
+        color: #3e4b3c;
+        font-family: auto;
       }
 
       .live-shell {
@@ -517,7 +526,7 @@
       .live-slide strong {
         display: block;
         margin-top: 3rem;
-        font-size: clamp(1.5rem, 4vw, 2.6rem);
+        font-size: 40px;
         letter-spacing: -0.045em;
       }
 
@@ -525,6 +534,7 @@
         max-width: 28rem;
         margin: 0.7rem 0 0;
         color: var(--muted);
+        font-size:20px;
       }
 
       .live-toolbar {
@@ -532,20 +542,22 @@
       }
 
       .live-actions {
-        grid-column: 1;
+        grid-column: 2;
         grid-row: 2;
         justify-self: start;
       }
 
       .live-nav {
-        grid-column: 3;
-        grid-row: 2;
+        /*grid-column: 2;
+        grid-row: 2;*/
+        display:flex;
         justify-self: end;
       }
 
       .live-actions,
       .live-nav {
         display: flex;
+        
         flex-wrap: wrap;
         gap: 0.6rem;
         align-items: center;
@@ -630,10 +642,12 @@
         .live-nav,
         .live-shell > .hero-dots {
           grid-column: 1;
+        
           justify-self: center;
         }
 
         .live-actions {
+          padding-left: 368px;
           grid-row: 2;
         }
 

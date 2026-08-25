@@ -3,3 +3,6 @@ pics/
 
 #Ignoro Fuentes Fuentes
 fonts/
+
+# Ignoro Ejecución por parte de .vscode
+-vscode/

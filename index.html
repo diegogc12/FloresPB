@@ -7,6 +7,7 @@
   <title>FloresPB</title>
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@blossom-carousel/web/dist/blossom-carousel-web.css"/>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="css/estilo.css">
   <link rel="stylesheet" href="css/cards-glass.css">
@@ -19,6 +20,10 @@
 
   <link rel="icon" type="image/png" href="pics/logoOk2.png">
   <!-- Logo en la cabecera -->
+   <link
+      rel="stylesheet"
+      href="https://unpkg.com/@blossom-carousel/web@1.4.2/dist/blossom-carousel-web.css"
+    />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,6 +32,7 @@
 </head>
 <body>
 
+  <!-- Barra de Navegación -->
    <header>
  <!-- <header>-->
     <!-- Bootstrap 5 -->
@@ -58,7 +64,7 @@
     </nav>
   </header>
 
-
+  <!-- Landing Page - Página de Inicio -->
   <main>
     <div class="hero" id="inicio">
     <div class="hero-content">
@@ -105,8 +111,10 @@
   </div>
   </main>
 
-  <section >
 
+  <!-- Sección de Card Top de Stock -->
+  <section>
+      <!-- Card Top de Seccion de Stock -->
 <div class="container text-center flex-container">
 
   <div class="row align-items-start">
@@ -136,7 +144,7 @@
 
   </section>
   
-  <!-- Sección de Stock-->
+  <!-- Sección de Contenidos Stock-->
 
   <section id="Stock">
     <div class="container">
@@ -309,6 +317,7 @@
 
  <section class="demo-section" id="Promociones" style="background-color: #394437;" aria-labelledby="live-title">
 
+  <!-- Slider Top de Promociones -->
   <div style="background-color: #3944376d;">
     <div class="slider" style="background-color: transparent;">
 	<div class="slide-track">
@@ -357,10 +366,10 @@
 	</div>
 </div>
   </div>
-
+      <!-- Seccion de Promociones  -->
         <div class="section-heading">
           <div style="padding-top: 40px;">
-            <a class="icon-link" href="#" style="padding-left: 120px; color: #F3EBDD;">
+            <a class="icon-link sub-title" href="#" style=" color: #F3EBDD;">
               <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 0c5.3 0 10.3 2.7 13.3 7.1 15.8 23.5 36.7 63.7 49.2 109 7.3 26.4 11.8 55.3 10.3 84 11.6-8.9 23.7-16.7 35.9-23.7 41-23.3 84.4-36.9 112.2-42.5 5.2-1 10.7 .6 14.4 4.4s5.4 9.2 4.4 14.5c-5.6 27.7-19.3 70.9-42.7 111.7-9.1 15.9-19.9 31.7-32.5 46.3 27.9 6.6 52.5 17.2 67.3 25.4 5.1 2.8 8.2 8.2 8.2 14s-3.2 11.2-8.2 14c-15.2 8.4-40.9 19.5-69.8 26.1-20.2 4.6-42.9 7.2-65.2 4.6l8.3 33.2c1.5 6.1-.6 12.5-5.5 16.4s-11.6 4.6-17.2 1.8L280 417.2 280 488c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-70.8-58.5 29.1c-5.6 2.8-12.3 2.1-17.2-1.8s-7-10.3-5.5-16.4l8.3-33.2c-22.2 2.6-45 0-65.2-4.6-28.9-6.6-54.5-17.6-69.8-26.1-5.1-2.8-8.2-8.2-8.2-14s3.2-11.2 8.2-14l6.2-3.3c15-7.6 36.8-16.4 61.1-22.2-12.5-14.5-23.3-30.4-32.4-46.2-23.4-40.8-37.1-84-42.7-111.7-1.1-5.2 .6-10.7 4.4-14.5s9.2-5.4 14.4-4.4c27.9 5.5 71.2 19.2 112.2 42.5 12.2 6.9 24.3 14.8 35.8 23.7-1.4-28.7 3.1-57.6 10.3-84 12.5-45.3 33.4-85.5 49.2-109l1.2-1.6C246.9 2 251.3 0 256 0z"/></svg>
             Algo que te Interesara... <br>
               </a>
@@ -368,26 +377,38 @@
             <h2 class="section-titlepromo" style="color: #F3EBDD;" id="live-title">Promociones</h2>
           </div>
         </div>
-
+          <!-- Carousel Contenedor-->
         <div class="carousel-shell live-shell">
           <blossom-carousel id="live-carousel" class="live-carousel" aria-label="Editable slide collection" tabindex="0" blossom-carousel="true" has-snap="true" has-repeat="false" style="transition: overflow-x 0.001ms step-start allow-discrete, overflow-y 0.001ms step-start; --snap-type: x mandatory; scroll-snap-type: none;" has-overflow="true"><template shadowrootmode="open"><slot></slot></template>
             <article class="live-slide" data-blossom-slide=""><p class="micro-label">Promo 01</p><strong>Combo</strong><p>2 Porros Forjado X $200.00</p></article>
-            
-            
-          <article class="live-slide " data-blossom-slide=""><p class="micro-label">Promo 02</p><strong>Mayoreo</strong><p>En Compras Mayores a $3000.00 llevate un Wax</p></article><article class="live-slide" data-blossom-slide=""><p class="micro-label">Item 03</p><strong>Red horizon</strong><p>A newly inserted item is ready for dragging, snapping, and direct navigation.</p></article></blossom-carousel>
+            <article class="live-slide " data-blossom-slide=""><p class="micro-label">Promo 02</p><strong>Mayoreo</strong><p>En Compras Mayores a $3000.00 llevate un Wax</p></article>
+            <article class="live-slide" data-blossom-slide=""><p class="micro-label">Promo 03</p><strong>Solo esta Semana</strong><p> Compra 2 Oz y la tercera llevatela a la mitad de Precio</p></article>
+          </blossom-carousel>
           
+          <!-- Slider Controls -->
           <div class="live-toolbar">
+            <!--
             <div class="live-actions">
               <button class="control-button" id="add-slide" type="button">Add slide</button>
               <button class="control-button" id="remove-slide" type="button">Remove slide</button>
             </div>
+              -->
             <div class="live-nav">
               <blossom-prev for="live-carousel"><button type="button" command="--blossom-prev" commandfor="live-carousel" aria-controls="live-carousel" aria-label="Previous slide" disabled="">Previous</button></blossom-prev>
               <span class="live-count" id="live-count">3 slides</span>
               <blossom-next for="live-carousel"><button type="button" command="--blossom-next" commandfor="live-carousel" aria-controls="live-carousel" aria-label="Next slide">Next</button></blossom-next>
             </div>
           </div>
-          <blossom-dots class="hero-dots" for="live-carousel" data-blossom-dots="" role="group" aria-label="Choose slide to display"><button type="button" data-blossom-dot="" command="--blossom-goto-0" commandfor="live-carousel" aria-label="Go to slide 1" aria-controls="live-carousel" aria-current="true"><span data-blossom-dot-marker=""></span></button><button type="button" data-blossom-dot="" command="--blossom-goto-1" commandfor="live-carousel" aria-label="Go to slide 2" aria-controls="live-carousel"><span data-blossom-dot-marker=""></span></button><button type="button" data-blossom-dot="" command="--blossom-goto-2" commandfor="live-carousel" aria-label="Go to slide 3" aria-controls="live-carousel"><span data-blossom-dot-marker=""></span></button></blossom-dots>
+          <!-- Puntos De Carrusel para mostrar elementos -->
+           <!--
+          <blossom-dots class="hero-dots" for="live-carousel" data-blossom-dots="" role="group" aria-label="Choose slide to display">
+            <button type="button" data-blossom-dot="" command="--blossom-goto-0" commandfor="live-carousel" aria-label="Go to slide 1" aria-controls="live-carousel" aria-current="true"><span data-blossom-dot-marker=""></span></button>
+            <button type="button" data-blossom-dot="" command="--blossom-goto-1" commandfor="live-carousel" aria-label="Go to slide 2" aria-controls="live-carousel">
+              <span data-blossom-dot-marker=""></span></button>
+              <button type="button" data-blossom-dot="" command="--blossom-goto-2" commandfor="live-carousel" aria-label="Go to slide 3" aria-controls="live-carousel">
+                <span data-blossom-dot-marker=""></span></button>
+              </blossom-dots>
+              -->
         </div>
       </section>
   <!--
@@ -480,11 +501,11 @@ CORPORATE DESIGN</h1>
   </section>
   -->
 
+  <!-- Sección de Galardonadas -->
 <section class="demo-section1" id="Historicas" aria-labelledby="vertical-title">
         <div class="section-heading">
           <div>
-            <p class="section-index">04 / Two-axis engine</p>
-            <h2 class="section-titlepromo" id="vertical-title" style="color: black;">De Nuestra Selección   </h2>
+            <h2 class="section-titlepromo" id="vertical-title" style="color: black;">De Nuestra Cosecha  </h2>
           </div>
         </div>
 
@@ -509,102 +530,187 @@ CORPORATE DESIGN</h1>
   
 
   <section id="bottom"> 
+
+<div class="container px-4 py-5" id="icon-grid"> 
+  <h2 class="pb-2 border-bottom">Información de Contacto</h2> 
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3  g-4 py-5"> 
+    <div class="col d-flex align-items-start">
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi text-body-secondary flex-shrink-0 me-3" width="2em" height="2em" aria-hidden="true" viewBox="0 0 576 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->    <path d="M360 0c13.3 0 24 10.7 24 24l0 19c0 40.3 16 79 44.5 107.5l21 21C469 191 480 217.4 480 245l0 19c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-19c0-14.9-5.9-29.1-16.4-39.6l-21-21C357.1 146.9 336 96 336 43l0-19c0-13.3 10.7-24 24-24zM552 288c-13.3 0-24-10.7-24-24l0-19c0-40.3-16-79-44.5-107.5l-21-21C443 97 432 70.6 432 43l0-19c0-13.3 10.7-24 24-24s24 10.7 24 24l0 19c0 14.9 5.9 29.1 16.4 39.6l21 21C554.9 141.1 576 192 576 245l0 19c0 13.3-10.7 24-24 24zM292.7 320c5.6 0 10.7 2.9 13.6 7.6L394.6 471c1.3 2.1 0 4.9-2.4 5.2-16.1 2.5-32.4 3.7-48.7 3.7l-38.1 0c-5.6 0-10.7-2.9-13.6-7.6l-79-128.4c-6-9.8 0-22.6 11.5-23.3 6.7-.4 13.4-.6 20.2-.6l48.3 0zM459.3 465.9c-6.4 1-12.7-1.9-16.1-7.4L374.1 346.1c-6.7-10.9 1.5-24.7 14.2-22.9 1.3 .2 2.6 .4 3.8 .6l136.4 21c27.3 4.2 47.4 27.7 47.4 55.3s-20.1 51.1-47.4 55.3l-69.2 10.6zM138.7 336c6.7-1.5 13.6 1.4 17.2 7.2l68.9 112c6.6 10.7-1.2 24.4-13.8 23.1-13-1.4-25.9-3.5-38.6-6.5L31.2 439.2C12.9 435 0 418.7 0 400s12.9-35 31.2-39.2L138.7 336z"/></svg>
+
+        <div>
+           <h2 href="https://whatsapp.com/channel/0029VbBqZ0aEVccOjTN87F0K" class="fw-bold mb-0 text-body-emphasis" style="font-size: 30px;">Contacto</h2>
+            <p> + 52 987 105 9404</p> 
+            <hr>
+            <p> Unete a Nuesto Canal: <br>
+            https://whatsapp.com/channel/0029VbBqZ0aEVccOjTN87F0K
+            </p>
+          </div> 
+        </div> 
+        <div class="col d-flex align-items-start"> 
+  <svg xmlns="http://www.w3.org/2000/svg"class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true" viewBox="0 0 512 512"><path d="M448.5 384c0 41.5-13.1 79.9-35.5 111.3-7.9 11.1-21.2 16.7-34.8 16.7l-243.3 0c-13.7 0-26.9-5.6-34.8-16.7-22.4-31.4-35.5-69.8-35.5-111.3 0-71.1 38.6-133.1 96-166.3l0-153.7c-17.7 0-32-14.3-32-32s14.3-32 32-32l192 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 153.7c14.2 8.2 27.2 18.2 38.8 29.6l39.3-39.3-7-7c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0c16 16 32 32 48 48 9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-7-7-43.3 43.3c17.3 28.9 27.3 62.6 27.3 98.8zM288.5 64l-64 0 0 190.6-32 18.5c-19.5 11.3-35.7 27.5-46.9 46.9l221.8 0c-11.2-19.4-27.4-35.6-46.9-46.9l-32-18.5 0-190.6z"/></svg>
+           <div>
+             <h2 class="fw-bold mb-0 text-body-emphasis">Horario:</h2> 
+             <p>
+              Todos Los Días, Hasta Agotar Existencias.
+                <br>
+                <hr>
+                <br>
+                Mañana a Noche.
+                <br>
+                <hr>
+                <br>
+                Pregunta Por Disponibilidad
+             </p>
+             </div> 
+            </div> 
+            <div class="col d-flex align-items-start"> 
+               <svg xmlns="http://www.w3.org/2000/svg" class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true" viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 0c5.3 0 10.3 2.7 13.3 7.1 15.8 23.5 36.7 63.7 49.2 109 7.3 26.4 11.8 55.3 10.3 84 11.6-8.9 23.7-16.7 35.9-23.7 41-23.3 84.4-36.9 112.2-42.5 5.2-1 10.7 .6 14.4 4.4s5.4 9.2 4.4 14.5c-5.6 27.7-19.3 70.9-42.7 111.7-9.1 15.9-19.9 31.7-32.5 46.3 27.9 6.6 52.5 17.2 67.3 25.4 5.1 2.8 8.2 8.2 8.2 14s-3.2 11.2-8.2 14c-15.2 8.4-40.9 19.5-69.8 26.1-20.2 4.6-42.9 7.2-65.2 4.6l8.3 33.2c1.5 6.1-.6 12.5-5.5 16.4s-11.6 4.6-17.2 1.8L280 417.2 280 488c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-70.8-58.5 29.1c-5.6 2.8-12.3 2.1-17.2-1.8s-7-10.3-5.5-16.4l8.3-33.2c-22.2 2.6-45 0-65.2-4.6-28.9-6.6-54.5-17.6-69.8-26.1-5.1-2.8-8.2-8.2-8.2-14s3.2-11.2 8.2-14l6.2-3.3c15-7.6 36.8-16.4 61.1-22.2-12.5-14.5-23.3-30.4-32.4-46.2-23.4-40.8-37.1-84-42.7-111.7-1.1-5.2 .6-10.7 4.4-14.5s9.2-5.4 14.4-4.4c27.9 5.5 71.2 19.2 112.2 42.5 12.2 6.9 24.3 14.8 35.8 23.7-1.4-28.7 3.1-57.6 10.3-84 12.5-45.3 33.4-85.5 49.2-109l1.2-1.6C246.9 2 251.3 0 256 0z"/></svg>  
+              <div> 
+                <h2 class="fw-bold mb-0 text-body-emphasis">Ubicación</h2> 
+                <p>
+                    Pregunta Por El Punto.
+                    <br>
+                    <hr>
+                    Mandar Ubicación Para Agilizar Tiempos
+                    <br>
+                    De Entrega.
+                </p>
+               </div>
+               </div>
+
+              
+                </div>
+              </div> 
+
+    <!--
     <div>
       <ul class="list-group">
     <h2 style="margin-left: 30px;">Redes Sociales <br></h2>
     <a class="icon-link" href="#" style="color: #FF7B93;">
-  <svg xmlns="http://www.w3.org/2000/svg" class="bi "viewBox="0 0 512 512" aria-hidden="true"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi "viewBox="0 0 512 512" aria-hidden="true">
     <path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5l0-170.3-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 175.9C413.8 494.8 512 386.9 512 256z"/>
   </svg>
   Flamingos Burgers <br>
     </a>
     <a class="icon-link" href="#" style="color: #FF7B93;">
-  <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 0c5.3 0 10.3 2.7 13.3 7.1 15.8 23.5 36.7 63.7 49.2 109 7.3 26.4 11.8 55.3 10.3 84 11.6-8.9 23.7-16.7 35.9-23.7 41-23.3 84.4-36.9 112.2-42.5 5.2-1 10.7 .6 14.4 4.4s5.4 9.2 4.4 14.5c-5.6 27.7-19.3 70.9-42.7 111.7-9.1 15.9-19.9 31.7-32.5 46.3 27.9 6.6 52.5 17.2 67.3 25.4 5.1 2.8 8.2 8.2 8.2 14s-3.2 11.2-8.2 14c-15.2 8.4-40.9 19.5-69.8 26.1-20.2 4.6-42.9 7.2-65.2 4.6l8.3 33.2c1.5 6.1-.6 12.5-5.5 16.4s-11.6 4.6-17.2 1.8L280 417.2 280 488c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-70.8-58.5 29.1c-5.6 2.8-12.3 2.1-17.2-1.8s-7-10.3-5.5-16.4l8.3-33.2c-22.2 2.6-45 0-65.2-4.6-28.9-6.6-54.5-17.6-69.8-26.1-5.1-2.8-8.2-8.2-8.2-14s3.2-11.2 8.2-14l6.2-3.3c15-7.6 36.8-16.4 61.1-22.2-12.5-14.5-23.3-30.4-32.4-46.2-23.4-40.8-37.1-84-42.7-111.7-1.1-5.2 .6-10.7 4.4-14.5s9.2-5.4 14.4-4.4c27.9 5.5 71.2 19.2 112.2 42.5 12.2 6.9 24.3 14.8 35.8 23.7-1.4-28.7 3.1-57.6 10.3-84 12.5-45.3 33.4-85.5 49.2-109l1.2-1.6C246.9 2 251.3 0 256 0z"/></svg>  flamingosburgerczm@gmail.com
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 512 512"><path d="M256 0c5.3 0 10.3 2.7 13.3 7.1 15.8 23.5 36.7 63.7 49.2 109 7.3 26.4 11.8 55.3 10.3 84 11.6-8.9 23.7-16.7 35.9-23.7 41-23.3 84.4-36.9 112.2-42.5 5.2-1 10.7 .6 14.4 4.4s5.4 9.2 4.4 14.5c-5.6 27.7-19.3 70.9-42.7 111.7-9.1 15.9-19.9 31.7-32.5 46.3 27.9 6.6 52.5 17.2 67.3 25.4 5.1 2.8 8.2 8.2 8.2 14s-3.2 11.2-8.2 14c-15.2 8.4-40.9 19.5-69.8 26.1-20.2 4.6-42.9 7.2-65.2 4.6l8.3 33.2c1.5 6.1-.6 12.5-5.5 16.4s-11.6 4.6-17.2 1.8L280 417.2 280 488c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-70.8-58.5 29.1c-5.6 2.8-12.3 2.1-17.2-1.8s-7-10.3-5.5-16.4l8.3-33.2c-22.2 2.6-45 0-65.2-4.6-28.9-6.6-54.5-17.6-69.8-26.1-5.1-2.8-8.2-8.2-8.2-14s3.2-11.2 8.2-14l6.2-3.3c15-7.6 36.8-16.4 61.1-22.2-12.5-14.5-23.3-30.4-32.4-46.2-23.4-40.8-37.1-84-42.7-111.7-1.1-5.2 .6-10.7 4.4-14.5s9.2-5.4 14.4-4.4c27.9 5.5 71.2 19.2 112.2 42.5 12.2 6.9 24.3 14.8 35.8 23.7-1.4-28.7 3.1-57.6 10.3-84 12.5-45.3 33.4-85.5 49.2-109l1.2-1.6C246.9 2 251.3 0 256 0z"/></svg>  
+  flamingosburgerczm@gmail.com
 </a>
 <a class="icon-link" href="#" style="color: #FF7B93;">
-  <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M448.5 384c0 41.5-13.1 79.9-35.5 111.3-7.9 11.1-21.2 16.7-34.8 16.7l-243.3 0c-13.7 0-26.9-5.6-34.8-16.7-22.4-31.4-35.5-69.8-35.5-111.3 0-71.1 38.6-133.1 96-166.3l0-153.7c-17.7 0-32-14.3-32-32s14.3-32 32-32l192 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 153.7c14.2 8.2 27.2 18.2 38.8 29.6l39.3-39.3-7-7c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0c16 16 32 32 48 48 9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-7-7-43.3 43.3c17.3 28.9 27.3 62.6 27.3 98.8zM288.5 64l-64 0 0 190.6-32 18.5c-19.5 11.3-35.7 27.5-46.9 46.9l221.8 0c-11.2-19.4-27.4-35.6-46.9-46.9l-32-18.5 0-190.6z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 512 512"><path d="M448.5 384c0 41.5-13.1 79.9-35.5 111.3-7.9 11.1-21.2 16.7-34.8 16.7l-243.3 0c-13.7 0-26.9-5.6-34.8-16.7-22.4-31.4-35.5-69.8-35.5-111.3 0-71.1 38.6-133.1 96-166.3l0-153.7c-17.7 0-32-14.3-32-32s14.3-32 32-32l192 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l0 153.7c14.2 8.2 27.2 18.2 38.8 29.6l39.3-39.3-7-7c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0c16 16 32 32 48 48 9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-7-7-43.3 43.3c17.3 28.9 27.3 62.6 27.3 98.8zM288.5 64l-64 0 0 190.6-32 18.5c-19.5 11.3-35.7 27.5-46.9 46.9l221.8 0c-11.2-19.4-27.4-35.6-46.9-46.9l-32-18.5 0-190.6z"/></svg>
   @flamingosburgers
 </a>
 <br>
   </ul>
     </div>
+    -->
     
+        <!--
+
   <div>
     <ul class="list-group">
-    <h2 style="margin-left: 30px;">Contacto</h2>
+    <h2 style="margin-left: 30px; color:#C59A45">Contacto</h2>
     
-    <a class="icon-link" href="#" style="color: #FF7B93;">
-  <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 576 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
-    <path d="M360 0c13.3 0 24 10.7 24 24l0 19c0 40.3 16 79 44.5 107.5l21 21C469 191 480 217.4 480 245l0 19c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-19c0-14.9-5.9-29.1-16.4-39.6l-21-21C357.1 146.9 336 96 336 43l0-19c0-13.3 10.7-24 24-24zM552 288c-13.3 0-24-10.7-24-24l0-19c0-40.3-16-79-44.5-107.5l-21-21C443 97 432 70.6 432 43l0-19c0-13.3 10.7-24 24-24s24 10.7 24 24l0 19c0 14.9 5.9 29.1 16.4 39.6l21 21C554.9 141.1 576 192 576 245l0 19c0 13.3-10.7 24-24 24zM292.7 320c5.6 0 10.7 2.9 13.6 7.6L394.6 471c1.3 2.1 0 4.9-2.4 5.2-16.1 2.5-32.4 3.7-48.7 3.7l-38.1 0c-5.6 0-10.7-2.9-13.6-7.6l-79-128.4c-6-9.8 0-22.6 11.5-23.3 6.7-.4 13.4-.6 20.2-.6l48.3 0zM459.3 465.9c-6.4 1-12.7-1.9-16.1-7.4L374.1 346.1c-6.7-10.9 1.5-24.7 14.2-22.9 1.3 .2 2.6 .4 3.8 .6l136.4 21c27.3 4.2 47.4 27.7 47.4 55.3s-20.1 51.1-47.4 55.3l-69.2 10.6zM138.7 336c6.7-1.5 13.6 1.4 17.2 7.2l68.9 112c6.6 10.7-1.2 24.4-13.8 23.1-13-1.4-25.9-3.5-38.6-6.5L31.2 439.2C12.9 435 0 418.7 0 400s12.9-35 31.2-39.2L138.7 336z"/>
-  </svg>
+    <a class="icon-link" href="#" style="color: #C59A45;">
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 576 512">!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.    <path d="M360 0c13.3 0 24 10.7 24 24l0 19c0 40.3 16 79 44.5 107.5l21 21C469 191 480 217.4 480 245l0 19c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-19c0-14.9-5.9-29.1-16.4-39.6l-21-21C357.1 146.9 336 96 336 43l0-19c0-13.3 10.7-24 24-24zM552 288c-13.3 0-24-10.7-24-24l0-19c0-40.3-16-79-44.5-107.5l-21-21C443 97 432 70.6 432 43l0-19c0-13.3 10.7-24 24-24s24 10.7 24 24l0 19c0 14.9 5.9 29.1 16.4 39.6l21 21C554.9 141.1 576 192 576 245l0 19c0 13.3-10.7 24-24 24zM292.7 320c5.6 0 10.7 2.9 13.6 7.6L394.6 471c1.3 2.1 0 4.9-2.4 5.2-16.1 2.5-32.4 3.7-48.7 3.7l-38.1 0c-5.6 0-10.7-2.9-13.6-7.6l-79-128.4c-6-9.8 0-22.6 11.5-23.3 6.7-.4 13.4-.6 20.2-.6l48.3 0zM459.3 465.9c-6.4 1-12.7-1.9-16.1-7.4L374.1 346.1c-6.7-10.9 1.5-24.7 14.2-22.9 1.3 .2 2.6 .4 3.8 .6l136.4 21c27.3 4.2 47.4 27.7 47.4 55.3s-20.1 51.1-47.4 55.3l-69.2 10.6zM138.7 336c6.7-1.5 13.6 1.4 17.2 7.2l68.9 112c6.6 10.7-1.2 24.4-13.8 23.1-13-1.4-25.9-3.5-38.6-6.5L31.2 439.2C12.9 435 0 418.7 0 400s12.9-35 31.2-39.2L138.7 336z"/></svg>
   <H4>+52 987 116 1465
   </H4>
   <br>
 </a>
 <br>
-<h2 style="margin-left: 30px;"> Horario de Atención:</h2>
-<h5 style="color: #FF7B93;">Todos los días de 6:00 p.m. a 23:00 p.m.</h5>
-<h5 style="color: #FF7B93;">Excepto los martes</h5>
+<h2 style="margin-left: 30p; color: #C59A45;"> Horario de Atención:</h2>
+<a class="icon-link" href="#" style="color: #C59A45;">
+    <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 512 512">!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.<path d="M256 0c5.3 0 10.3 2.7 13.3 7.1 15.8 23.5 36.7 63.7 49.2 109 7.3 26.4 11.8 55.3 10.3 84 11.6-8.9 23.7-16.7 35.9-23.7 41-23.3 84.4-36.9 112.2-42.5 5.2-1 10.7 .6 14.4 4.4s5.4 9.2 4.4 14.5c-5.6 27.7-19.3 70.9-42.7 111.7-9.1 15.9-19.9 31.7-32.5 46.3 27.9 6.6 52.5 17.2 67.3 25.4 5.1 2.8 8.2 8.2 8.2 14s-3.2 11.2-8.2 14c-15.2 8.4-40.9 19.5-69.8 26.1-20.2 4.6-42.9 7.2-65.2 4.6l8.3 33.2c1.5 6.1-.6 12.5-5.5 16.4s-11.6 4.6-17.2 1.8L280 417.2 280 488c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-70.8-58.5 29.1c-5.6 2.8-12.3 2.1-17.2-1.8s-7-10.3-5.5-16.4l8.3-33.2c-22.2 2.6-45 0-65.2-4.6-28.9-6.6-54.5-17.6-69.8-26.1-5.1-2.8-8.2-8.2-8.2-14s3.2-11.2 8.2-14l6.2-3.3c15-7.6 36.8-16.4 61.1-22.2-12.5-14.5-23.3-30.4-32.4-46.2-23.4-40.8-37.1-84-42.7-111.7-1.1-5.2 .6-10.7 4.4-14.5s9.2-5.4 14.4-4.4c27.9 5.5 71.2 19.2 112.2 42.5 12.2 6.9 24.3 14.8 35.8 23.7-1.4-28.7 3.1-57.6 10.3-84 12.5-45.3 33.4-85.5 49.2-109l1.2-1.6C246.9 2 251.3 0 256 0z"/></svg>  
+
+  Todos Los Días, Hasta Agotar Existencias.
+  <br>
+  Mañana a Noche.
+  <br>
+  Pregunta Por Disponibilidad
+</a>
   </ul>
   </div>
+-->
+      <!--
 
  <div>
   <ul class="list-group">
     <br>
-  <h2 style="margin-left: 30px;">Ubicación</h2>
+  <h2 style="margin-left: 30px; color: #C59A45;">Ubicación</h2>
   <a class="icon-link" href="#" style="color: #C59A45;">
-  <svg xmlns="http://www.w3.org/2000/svg" class="bi" aria-hidden="true" viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+  <svg xmlns="http://www.w3.org/2000/svg" class="bi" aria-hidden="true" viewBox="0 0 512 512">!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.
     <path d="M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-9.6 9-12.8 22.9-8 35.1S18.8 272 32 272l16 0 0 176c0 35.3 28.7 64 64 64l288 0c35.3 0 64-28.7 64-64l0-176 16 0c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8-35.1l-224-208zM240 320l32 0c26.5 0 48 21.5 48 48l0 96-128 0 0-96c0-26.5 21.5-48 48-48z"/>
   </svg>
-  Calle gaviotas entre 85 y 90, Colonia Flamingos II, C.P. 77660, Cozumel, Q.R.
+  -->
+      <!--
+
+  Pregunta Por El Punto.
+  <br>
+  Mandar Ubicación Para Agilizar Tiempos
+  <br>
+  De Entrega.
 </a>
   <a class="btn btn-link "  data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
   <button class="btn btn-rosa"> Mapa</button>
 </a>
  </ul>
  </div>
-  <div class="text-center">
-    <img src="pics/Pblog.jpeg" loading="lazy" class="rounded" width="160" height="90">
+ -->
+     <!--
+
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2">
+      <div class="text-center">
+    <img src="pics/pbPie.png" loading="lazy" class="rounded" width="250" height="200">
   </div>
+  <div class="text-center">
+    <img src="pics/escobarto.png" loading="lazy" class="rounded" width="250" height="200">
+  </div>
+    </div>
+  </div>
+  -->
+        <div class="text-center">
+    <img src="pics/pbPie.png" loading="lazy" class="rounded" width="250" height="200">
+
 
   </section>
 
+      <!-- Sección de Pedidos .- Mayoreo y Menudeo -->
+
+
   <div class="offcanvas offcanvas-top text-bg-dark" id="offcanvastop" style="height: auto;">
     <div class="offcanvas-header">
-      <h3 class="offcanvas-title position-absolute top-0 start-50 translate-middle" style="padding-top: 70px; color: #FF7B93;">Método de Pedido</h3>
+      <h3 class="offcanvas-title position-absolute top-0 start-50 translate-middle" style="padding-top: 70px; color: #C59A45;">Método de Pedido</h3>
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-level="Cerrar"></button>
     </div>
     <div class="offcanvas-body text-center">
       <div class="row g-4">
-        <div class="col-6">
-          <div class="card bg-dark text-white p-4">
-            <button class="btn btn-metodopedido w-100" id="btnMostrador">Pasar a buscar</button>
-          </div>
-        </div>
-        <div class="col-6">
-          <div class="card bg-dark text-white p-4">
+ 
+      
+ 
+        <div class="col-16">
+          <div class=" bg-dark text-white p-4">
             <button class="btn btn-metodopedido w-100" id="btnDomicilio">Domicilio</button>
           </div>
         </div>
       </div>
     
 
-      <!-- Pasar a buscar -->
+      <!-- Pasar a buscar
     <div id="formMostrador" class="mt-4 d-none">
         <div class="card bg-dark p-3 border-secondary">
             <label class="btnform">Nombre de Cliente:</label>
             <input type="text" id="nombreMostrador" class="form-control bg-dark text-white border-secondary" placeholder="Mostrador">
         </div>
     </div>
+     -->
 
         <!-- domicilio -->
     <div id="formDomicilio" class="mt-4 d-none">
         <div class="card bg-dark p-3 border-secondary">
-            <label class="btnform">Nombre del cliente:</label>
+            <label class="btnform">A Nombre de:</label>
             <input type="text" id="nombreDom" class="form-control bg-dark text-white border-secondary mb-2" placeholder="Ej: Juan Pérez">
-
-            <label class="btnform">Teléfono:</label>
-            <input type="text" id="telefonoDom" class="form-control bg-dark text-white border-secondary mb-2" placeholder="9871641465">
 
             <label class="btnform">Calle:</label> <!-- Actualizar las variables en el js -->
             <input type="text" id="calleDom" class="form-control bg-dark text-white border-secondary mb-2" placeholder="Calle 28 #123">
@@ -614,6 +720,16 @@ CORPORATE DESIGN</h1>
 
             <label class="btnform">Referencia:</label>
             <input type="text" id="referenciaDom" class="form-control bg-dark text-white border-secondary" placeholder="Casa verde de dos pisos, con arból en la entrada...">
+
+            <button id="btnUbicacion">Usar mi ubicación</button>
+            <form id="formVentas" action="/procesar" method="POST">
+              <input type="hidden" name="ubicacion" id="ubicacion">
+              <button type="submit">Enviar</button>
+            </form>
+
+            <div id="map" style="height:300px;"></div>
+
+
         </div>
     </div>
       <!-- Menú para pedir -->
@@ -623,50 +739,100 @@ CORPORATE DESIGN</h1>
           <div class="row g-4">
             <!-- Hamburguesas -->
             <div class="col-md-6">
-              <h3 class=" mb-4 border-bottom border-secondary pb-2" style="color: #FF7B93;">Hamburguesas</h3>
+              <h3 class=" mb-4 border-bottom border-secondary pb-2" style="color: #C59A45;">Menudeo</h3>
               <div class="list-group list-group-flush bg-transparent">
                 
                   <!-- Item 1 -->
                 <div class="list-group-item bg-transparent text-white border-secondary mb-3">
                   <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">Clásica</span>
-                    <span class="badge bg-rosa rounded-pill">$80.00</span>
+                    <span class="fw">Lemon Frost</span>
+                    <!--
+                    <span class="badge bg-rosa rounded-pill">$80.00</span> -->
                   </div>
                   <div class="d-flex align-items-center mt-2 gap-3">
                     <div class="input-group input-group-sm" style="width: 150px;">
                       <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                      <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="80" data-name="Clásica">
+                      <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="0" data-name="Clásica">
                       <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
                     </div>
-                    <input type="text"  class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Comentarios Adicionales..."> 
-                  </div> <!-- Complementos de Hamburguesas -->
+                    <input type="text"  class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Pon tu Precio/Cantidad..."> 
+                  </div> 
+                  
+                  <!-- Complementos de Hamburguesas -->
                   <div class="contenedor-btns ingredient-chips" data-type="burger">
-                    <div class="ingredient-group" data-ingredient="Carne" data-price="35">
+                    <div class="ingredient-group" data-ingredient="Carne" data-price="100">
                       <button class="carne-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip" id="carne">Carne</span>
+                      <span class="ingredient-chip" id="carne">3 G x $100.00</span>
                       <button class="carne-ctrl" data-action="plus" type="button">+</button>
                     </div>
-                    <div class="ingredient-group" data-ingredient="Queso Daisy" data-price="15">
+
+                    <div class="ingredient-group" data-ingredient="Queso Daisy" data-price="150">
                       <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Queso Daisy</span>
+                      <span class="ingredient-chip">5 G x $150.00</span>
                       <button class="chip-ctrl" data-action="plus" type="button">+</button>
                     </div>
-                    <div class="ingredient-group" data-ingredient="Queso Gouda" data-price="15">
+
+                    <div class="ingredient-group" data-ingredient="Queso Gouda" data-price="200">
                       <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Queso Gouda</span>
+                      <span class="ingredient-chip">8 G x $200.00</span>
                       <button class="chip-ctrl" data-action="plus" type="button">+</button>
                     </div>
+
                     <div class="ingredient-group" data-ingredient="Jamón" data-price="15">
                       <button class="chip-ctrl" data-action="minus" type="button">-</button>
                       <span class="ingredient-chip">Jamón</span>
                       <button class="chip-ctrl" data-action="plus" type="button">+</button>
                     </div>
-                    <div class="ingredient-group" data-ingredient="Tocino" data-price="25">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Tocino</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
+
+                    <div class="gramaje-group" data-gramos="Og Kush" data-price="250">
+                      <button class="gramaje-btn" data-action="minus" type="button">-</button>
+                      <span class="gramaje-chip">8 G x $300.00</span>
+                      <button class="gramaje-btn" data-action="plus" type="button">+</button>
                     </div>
-                    <span class=" ingredient-chip item-extras" data-price="10">Piña</span>
+
+                    <div class="gramaje-group"
+                        data-gramos="3"
+                        data-price="100">
+
+                        <button class="gramaje-btn" data-action="minus" type="button">-</button>
+
+                        <span class="gramaje-chip">
+                            3 g x $100.00
+                        </span>
+
+                        <button class="gramaje-btn" data-action="plus" type="button">+</button>
+
+                    </div>
+
+                    <div class="gramaje-group"
+                        data-gramos="7"
+                        data-price="200">
+
+                        <button class="gramaje-btn" data-action="minus" type="button">−</button>
+
+                        <span class="gramaje-chip">
+                            7 g × $200.00
+                        </span>
+
+                        <button class="gramaje-btn" data-action="plus" type="button">+</button>
+
+                    </div>
+
+                    <div class="gramaje-group"
+                        data-gramos="9"
+                        data-price="900">
+
+                        <button class="gramaje-btn" data-action="minus" type="button">−</button>
+
+                        <span class="gramaje-chip">
+                            9 g × $900.00
+                        </span>
+
+                        <button class="gramaje-btn" data-action="plus" type="button">+</button>
+
+                    </div>
+
+                    <span class=" ingredient-chip item-extras" data-price="500">1/2 Oz</span>
                     <span class="ingredient-chip item-extras" data-price="10">Guacamole</span>
                     <span class="ingredient-chip item-extras" data-price="10">Chorizo</span>
                     <span class="ingredient-chip item-extras" data-price="10">Jalapeños</span>
@@ -769,161 +935,18 @@ CORPORATE DESIGN</h1>
                     <span class="ingredient-chip item-extras" data-price="0">Pepinillos</span>
                   </div>
                 </div>
-                <!-- Item 4 -->
-                <div class="list-group-item bg-transparent text-white border-secondary mb-3">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">BBQ</span>
-                    <span class="badge bg-rosa rounded-pill">$100.00</span>
-                  </div>
-                  <div class="d-flex align-items-center mt-2 gap-3">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                      <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="100" data-name="BBQ">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
-                    </div>
-                    <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Comentarios Adicionales...">
-                  </div>
-                  <div class="contenedor-btns ingredient-chips" data-type="burger">
-                    <div class="ingredient-group" data-ingredient="Carne" data-price="35">
-                      <button class="carne-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Carne</span>
-                      <button class="carne-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Queso Daisy" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Queso Daisy</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Queso Gouda" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Queso Gouda</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Jamón" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Jamón</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Tocino" data-price="25">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Tocino</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <span class="ingredient-chip item-extras" data-price="10">Piña</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Guacamole</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Chorizo</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Jalapeños</span>
-                    
-                    <span class="ingredient-chip item-extras" data-price="0">Pepinillos</span>
-                  </div>
-                </div>
-                <!-- Item 5 -->
-                <div class="list-group-item bg-transparent text-white border-secondary mb-3">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">Mexicana</span>
-                    <span class="badge bg-rosa rounded-pill">$120.00</span>
-                  </div>
-                  <div class="d-flex align-items-center mt-2 gap-3">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                      <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="120" data-name="Mexicana">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
-                    </div>
-                    <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Comentarios Adicionales...">
-                  </div>
-                  <div class="contenedor-btns ingredient-chips" data-type="burger">
-                    <div class="ingredient-group" data-ingredient="Carne" data-price="35">
-                      <button class="carne-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Carne</span>
-                      <button class="carne-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Queso Daisy" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Queso Daisy</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Queso Gouda" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Queso Gouda</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Jamón" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Jamón</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Tocino" data-price="25">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Tocino</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <span class="ingredient-chip item-extras" data-price="10">Piña</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Guacamole</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Chorizo</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Jalapeños</span>
-                    
-                    <span class="ingredient-chip item-extras" data-price="0">Pepinillos</span>
-                  </div>
-                </div>
-                <!-- Item 6 -->
-                <div class="list-group-item bg-transparent text-white border-secondary mb-3">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">Fungi</span>
-                    <span class="badge bg-rosa rounded-pill">$120.00</span>
-                  </div>
-                  <div class="d-flex align-items-center mt-2 gap-3">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                      <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="120" data-name="Fungi">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
-                    </div>
-                    <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Comentarios Adicionales...">
-                  </div>
-                  <div class="contenedor-btns ingredient-chips" data-type="burger">
-                    <div class="ingredient-group" data-ingredient="Carne" data-price="35">
-                      <button class="carne-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Carne</span>
-                      <button class="carne-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Queso Daisy" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Queso Daisy</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Queso Gouda" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Queso Gouda</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Jamón" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Jamón</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Tocino" data-price="25">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Tocino</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <span class="ingredient-chip item-extras" data-price="10">Piña</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Guacamole</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Chorizo</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Jalapeños</span>
-                    
-                    <span class="ingredient-chip item-extras" data-price="0">Pepinillos</span>
-                  </div>
-                </div>
+                
               </div>
             </div>
 
             <!-- Complementos -->
             <div class="col-md-6">
-              <h3 class="mb-4 border-bottom border-secondary pb-2" style="color: #FF7B93;">Complementos</h3>
+              <h3 class="mb-4 border-bottom border-secondary pb-2" style="color: #C59A45;">Mayoreo</h3>
               <div class="list-group list-group-flush bg-transparent">
                 <!-- Item 1 -->
                 <div class="list-group-item bg-transparent text-white border-secondary mb-3">
                   <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">Papas Fritas</span>
+                    <span class="fw">Lemon Frost</span>
                     <span class="badge bg-rosa rounded-pill">$65.00</span>
                   </div>
                   <div class="d-flex align-items-center mt-2 gap-3">
@@ -936,7 +959,7 @@ CORPORATE DESIGN</h1>
                   </div>
                   <div class="ingredient-chips" data-type="dip">
                     <div class="ingredient-group aderezo-group" data-ingredient="Ranch" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Ranch</span>
+                      <span class="ingredient-chip aderezo-chip">Oz</span>
                     </div>
                     <div class="ingredient-group aderezo-group" data-ingredient="Buffalo" data-price="0">
                       <span class="ingredient-chip aderezo-chip">Buffalo</span>
@@ -1016,195 +1039,12 @@ CORPORATE DESIGN</h1>
                       </div>
                   </div>
                 </div>
-                <!-- Item 4 -->
-                <div class="list-group-item bg-transparent text-white border-secondary mb-3">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">Papas Curly</span>
-                    <span class="badge bg-rosa rounded-pill">$65.00</span>
-                  </div>
-                  <div class="d-flex align-items-center mt-2 gap-3">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                      <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="65" data-name="Papas Curly">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
-                    </div>
-                    <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Adicionales" id="papasCurlyExtras">
-                  </div>
-                  
-                    <div class="ingredient-chips" data-type="dip">
-                      <div class="ingredient-group aderezo-group" data-ingredient="Ranch" data-price="0">
-                        <span class="ingredient-chip aderezo-chip">Ranch</span>
-                      </div>
-                      <div class="ingredient-group aderezo-group" data-ingredient="Buffalo" data-price="0">
-                        <span class="ingredient-chip aderezo-chip">Buffalo</span>
-                      </div>
-                      <div class="ingredient-group aderezo-group" data-ingredient="Ajo Habanero" data-price="0">
-                        <span class="ingredient-chip aderezo-chip">Ajo Habanero</span>
-                      </div>
-                      <div class="ingredient-group aderezo-group" data-ingredient="Chipotle" data-price="0">
-                        <span class="ingredient-chip aderezo-chip">Chipotle</span>
-                      </div>
-                      <div class="ingredient-group aderezo-group" data-ingredient="BBQ" data-price="0">
-                        <span class="ingredient-chip aderezo-chip">BBQ</span>
-                      </div>
-                  </div>
-                </div>
-                <!-- Item 5 -->
-                <div class="list-group-item bg-transparent text-white border-secondary mb-3">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">Dedos de Queso</span>
-                    <span class="badge bg-rosa rounded-pill">$90.00</span>
-                  </div>
-                  <div class="d-flex align-items-center mt-2 gap-3">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                      <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="90" data-name="Dedos de Queso">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
-                    </div>
-                    <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Preferencias...">
-                  </div>
-                  <div class="ingredient-chips" data-type="dip">
-                    <div class="ingredient-group aderezo-group" data-ingredient="Ranch" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Ranch</span>
-                    </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="Buffalo" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Buffalo</span>
-                    </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="Ajo Habanero" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Ajo Habanero</span>
-                    </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="Chipotle" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Chipotle</span>
-                    </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="BBQ" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">BBQ</span>
-                    </div>
-                  </div>
-                  </div>
-                  <!-- Item 6 -->
-                <div class="list-group-item bg-transparent text-white border-secondary mb-3">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">Plato Botanero</span>
-                    <span class="badge bg-rosa rounded-pill">$180.00</span>
-                  </div>
-                  <div class="d-flex align-items-center mt-2 gap-3">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                      <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="180" data-name="Plato Botanero">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
-                    </div>
-                    <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Añade tus Adicionales...">
-                  </div>
-                  <div class="ingredient-chips" data-type="dip">
-                    <div class="ingredient-group aderezo-group" data-ingredient="Ranch" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Ranch</span>
-                    </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="Buffalo" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Buffalo</span>
-                    </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="Ajo Habanero" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Ajo Habanero</span>
-                    </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="Chipotle" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Chipotle</span>
-                    </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="BBQ" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">BBQ</span>
-                    </div>
-                  </div>
-                  </div>
                 </div>
 
                 </div> <!-- fin de columna de complementos -->
 
-                <div class="row g-4 contenido-adicional">  <!-- Aderezos Adicionales -->
-                  <h3 class="mb-4 border-bottom border-secondary pb-2" style="color: #FF7B93;">Aderezos Adicionales</h3>
-                    <div class = "col-md-6"> 
-                      <div class="list-group list-group-flush bg-transparent">
-                        <!-- Item 1 -->
-                         <div class="list-group-item bg-transparent text-white border-secondary mb-3">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw">Ranch</span>
-                            <span class="badge bg-rosa rounded-pill">$5.00</span>
-                          </div>
-                          <div class="d-flex align-items-center mt-2 gap-3">
-                            <div class="input-group input-group-sm" style="width: 150px;">
-                              <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                              <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="5" data-name="Aderezo Ranch">
-                              <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
-                            </div>
-                            <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Añade tus Adicionales...">
-                          </div>
-                          </div>
-                  <!-- Item 2 -->
-                         <div class="list-group-item bg-transparent text-white border-secondary mb-3">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw">Buffalo</span>
-                            <span class="badge bg-rosa rounded-pill">$5.00</span>
-                          </div>
-                          <div class="d-flex align-items-center mt-2 gap-3">
-                            <div class="input-group input-group-sm" style="width: 150px;">
-                              <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                              <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="5" data-name="Aderezo Buffalo">
-                              <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
-                            </div>
-                            <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Añade tus Adicionales...">
-                          </div>
-                          </div>
-                  <!-- Item 3 -->
-                         <div class="list-group-item bg-transparent text-white border-secondary mb-3">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw">Chipotle</span>
-                            <span class="badge bg-rosa rounded-pill">$5.00</span>
-                          </div>
-                          <div class="d-flex align-items-center mt-2 gap-3">
-                            <div class="input-group input-group-sm" style="width: 150px;">
-                              <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                              <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="5" data-name="Aderezo Chipotle">
-                              <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
-                            </div>
-                            <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Añade tus Adicionales...">
-                          </div>
-                          </div>
-                              </div>
-
-                    </div>
-                    <div class = "col-md-6"> 
-                      <div class="list-group list-group-flush bg-transparent">
-                        <!-- Item 1 -->
-                         <div class="list-group-item bg-transparent text-white border-secondary mb-3">
-                          <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw">BBQ</span>
-                            <span class="badge bg-rosa rounded-pill">$5.00</span>
-                          </div>
-                          <div class="d-flex align-items-center mt-2 gap-3">
-                            <div class="input-group input-group-sm" style="width: 150px;">
-                              <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                              <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="5" data-name="Aderezo BBQ">
-                              <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
-                            </div>
-                            <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Añade tus Adicionales...">
-                          </div>
-                          </div>
-                  <!-- Item 2 -->
-                         <div class="list-group-item bg-transparent text-white border-secondary mb-3">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">Ajo Habanero</span>
-                    <span class="badge bg-rosa rounded-pill">$5.00</span>
-                  </div>
-                  <div class="d-flex align-items-center mt-2 gap-3">
-                    <div class="input-group input-group-sm" style="width: 150px;">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                      <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="5" data-name="Aderezo Ajo Habanero">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
-                    </div>
-                    <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Añade tus Adicionales...">
-                  </div>
-                  </div>
-                      </div>
-
-                    </div>
-                </div>
+                
+                
               </div>
             </div>
           
@@ -1222,7 +1062,6 @@ CORPORATE DESIGN</h1>
       </div>
     </div>
     </div>
-  </div>
 <!-- OffCanva de inicio de sesión, pero no requerida para este sitio, se puede implementar en un futuro para clientes frecuentes o para administración 
 
   <div class="offcanvas offcanvas-end text-bg-dark" id="offcanvalogin">
@@ -1276,10 +1115,12 @@ CORPORATE DESIGN</h1>
 </div> 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/respnsv.js"></script>
+<script defer src="https://unpkg.com/@blossom-carousel/web/dist/blossom-carousel-web.umd.js"></script>  
+<script src="js/respnsv.js"></script>
+<script src="js/pedidos.js"></script>
   <script src="js/modalView.js"></script>
   <script src="js/request.js"></script>
-  <script src="js/blossom.js"></script>
+  <script src="js/ubiUser.js"></script>
 </body>
 
 </html>

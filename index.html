@@ -7,8 +7,8 @@
   <title>FloresPB</title>
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/@blossom-carousel/web/dist/blossom-carousel-web.css"/>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://unpkg.com/@blossom-carousel/web/dist/blossom-carousel-web.css"/>
   <link rel="stylesheet" href="css/estilo.css">
   <link rel="stylesheet" href="css/cards-glass.css">
   <link rel="stylesheet" href="css/modal.css">
@@ -20,6 +20,9 @@
 
   <link rel="icon" type="image/png" href="pics/logoOk2.png">
   <!-- Logo en la cabecera -->
+   <script
+            async
+            src="https://maps.googleapis.com/maps/api/js?loading=async&key=AIzaSyCDXN2mNsk5fRy4fheyz-JhtSgWVEZNIa0&libraries=maps,marker"></script>
    <link
       rel="stylesheet"
       href="https://unpkg.com/@blossom-carousel/web@1.4.2/dist/blossom-carousel-web.css"
@@ -33,7 +36,7 @@
 <body>
 
   <!-- Barra de Navegación -->
-   <header>
+ <header>
  <!-- <header>-->
     <!-- Bootstrap 5 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent container">
@@ -41,8 +44,12 @@
         <img src="pics/logoPB.png" alt="Logo"
           class="rounded">
       </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class=""></span>
+        <span class=" navbar-toggler-icon">
+         <svg xmlns="http://www.w3.org/2000/svg" class="bi text-body-secondary flex-shrink-0 me-3" width="1.75em" height="1.75em" aria-hidden="true" viewBox="0 0 512 512"><!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.--><path d="M256 0c5.3 0 10.3 2.7 13.3 7.1 15.8 23.5 36.7 63.7 49.2 109 7.3 26.4 11.8 55.3 10.3 84 11.6-8.9 23.7-16.7 35.9-23.7 41-23.3 84.4-36.9 112.2-42.5 5.2-1 10.7 .6 14.4 4.4s5.4 9.2 4.4 14.5c-5.6 27.7-19.3 70.9-42.7 111.7-9.1 15.9-19.9 31.7-32.5 46.3 27.9 6.6 52.5 17.2 67.3 25.4 5.1 2.8 8.2 8.2 8.2 14s-3.2 11.2-8.2 14c-15.2 8.4-40.9 19.5-69.8 26.1-20.2 4.6-42.9 7.2-65.2 4.6l8.3 33.2c1.5 6.1-.6 12.5-5.5 16.4s-11.6 4.6-17.2 1.8L280 417.2 280 488c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-70.8-58.5 29.1c-5.6 2.8-12.3 2.1-17.2-1.8s-7-10.3-5.5-16.4l8.3-33.2c-22.2 2.6-45 0-65.2-4.6-28.9-6.6-54.5-17.6-69.8-26.1-5.1-2.8-8.2-8.2-8.2-14s3.2-11.2 8.2-14l6.2-3.3c15-7.6 36.8-16.4 61.1-22.2-12.5-14.5-23.3-30.4-32.4-46.2-23.4-40.8-37.1-84-42.7-111.7-1.1-5.2 .6-10.7 4.4-14.5s9.2-5.4 14.4-4.4c27.9 5.5 71.2 19.2 112.2 42.5 12.2 6.9 24.3 14.8 35.8 23.7-1.4-28.7 3.1-57.6 10.3-84 12.5-45.3 33.4-85.5 49.2-109l1.2-1.6C246.9 2 251.3 0 256 0z"/></svg>  
+
+        </span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav gap-lg-4">
@@ -51,7 +58,9 @@
           <li class="nav-item"><a class="nav-link btn-navegacion" href="#Promociones">Promociones</a></li>
           <li class="nav-item"><a class="nav-link btn-navegacion" href="#Historicas">Historicas</a></li>
           <li class="nav-item"><a class="nav-link btn-navegacion" href="#bottom">Contacto</a></li>
-          <div class="nav-button">
+          
+        </ul>
+        <div class="nav-button">
             <li class="nav-item d-flex align-items-center nav-button">
               <button class="btn-pide2" data-bs-toggle="modal" data-bs-target="#menuModal">Menú</button>
           </li>
@@ -59,7 +68,6 @@
               <button class="btn-pide2" data-bs-toggle="offcanvas" data-bs-target="#offcanvastop">Mayoreo/Menudeo</button>
           </li>
           </div>
-        </ul>
       </div>
     </nav>
   </header>
@@ -543,7 +551,8 @@ CORPORATE DESIGN</h1>
             <p> + 52 987 105 9404</p> 
             <hr>
             <p> Unete a Nuesto Canal: <br>
-            https://whatsapp.com/channel/0029VbBqZ0aEVccOjTN87F0K
+            https://whatsapp.com/channel-
+            <br>/0029VbBqZ0aEVccOjTN87F0K
             </p>
           </div> 
         </div> 
@@ -727,7 +736,17 @@ CORPORATE DESIGN</h1>
               <button type="submit">Enviar</button>
             </form>
 
-            <div id="map" style="height:300px;"></div>
+            <div style="height:300px;">
+              <gmp-map style="height: 100%;"
+            center="41.027748173921374, -92.41852445367961"
+            zoom="13"
+            map-id="DEMO_MAP_ID">
+            <gmp-advanced-marker id = "map"
+                position="41.027748173921374, -92.41852445367961"
+                title="Ottumwa, IA"></gmp-advanced-marker>
+            </gmp-map>
+            </div>
+             
 
 
         </div>
@@ -744,106 +763,108 @@ CORPORATE DESIGN</h1>
                 
                   <!-- Item 1 -->
                 <div class="list-group-item bg-transparent text-white border-secondary mb-3">
+                  <!-- Descripción de Elemento -->
                   <div class="d-flex justify-content-between align-items-center">
                     <span class="fw">Lemon Frost</span>
-                    <!--
-                    <span class="badge bg-rosa rounded-pill">$80.00</span> -->
+                    
+                    <span class="badge bg-rosa rounded-pill">$80.00</span> 
                   </div>
                   <div class="d-flex align-items-center mt-2 gap-3">
                     <div class="input-group input-group-sm" style="width: 150px;">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
-                      <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="0" data-name="Clásica">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
+                      <!--<button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>-->
+                      <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0">
+                      <!--<button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button> -->
                     </div>
                     <input type="text"  class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Pon tu Precio/Cantidad..."> 
                   </div> 
                   
-                  <!-- Complementos de Hamburguesas -->
-                  <div class="contenedor-btns ingredient-chips" data-type="burger">
-                    <div class="ingredient-group" data-ingredient="Carne" data-price="100">
-                      <button class="carne-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip" id="carne">3 G x $100.00</span>
-                      <button class="carne-ctrl" data-action="plus" type="button">+</button>
-                    </div>
+                  <!-- Gramaje y Cantidades de Flores -->
 
-                    <div class="ingredient-group" data-ingredient="Queso Daisy" data-price="150">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">5 G x $150.00</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-
-                    <div class="ingredient-group" data-ingredient="Queso Gouda" data-price="200">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">8 G x $200.00</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-
-                    <div class="ingredient-group" data-ingredient="Jamón" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Jamón</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-
-                    <div class="gramaje-group" data-gramos="Og Kush" data-price="250">
-                      <button class="gramaje-btn" data-action="minus" type="button">-</button>
-                      <span class="gramaje-chip">8 G x $300.00</span>
-                      <button class="gramaje-btn" data-action="plus" type="button">+</button>
-                    </div>
-
+                  <div class="contenedor-btns ingredient-chips" data-type="flores-dispo">
+                    <!-- Tarjeta 1 -->
                     <div class="gramaje-group"
                         data-gramos="3"
-                        data-price="100">
+                        data-price="100"
+                        data-quantity="0">
 
-                        <button class="gramaje-btn" data-action="minus" type="button">-</button>
+                        <button
+                            class="gramaje-btn"
+                            data-action="minus"
+                            type="button">
+                            -
+                        </button>
 
                         <span class="gramaje-chip">
-                            3 g x $100.00
+                            3 G x $100.00
                         </span>
 
-                        <button class="gramaje-btn" data-action="plus" type="button">+</button>
+                        <button
+                            class="gramaje-btn"
+                            data-action="plus"
+                            type="button">
+                            +
+                        </button>
 
                     </div>
 
+                    <!-- Tarjeta 2 -->
                     <div class="gramaje-group"
-                        data-gramos="7"
-                        data-price="200">
+                      data-gramos="7"
+                      data-price="200"
+                      data-quantity="0">
 
-                        <button class="gramaje-btn" data-action="minus" type="button">−</button>
+                      <button
+                          class="gramaje-btn"
+                          data-action="minus"
+                          type="button">
+                          -
+                      </button>
 
-                        <span class="gramaje-chip">
-                            7 g × $200.00
-                        </span>
+                      <span class="gramaje-chip">
+                          7 G x $200.00
+                      </span>
 
-                        <button class="gramaje-btn" data-action="plus" type="button">+</button>
+                      <button
+                          class="gramaje-btn"
+                          data-action="plus"
+                          type="button">
+                          +
+                      </button>
+                  </div>
 
-                    </div>
+                  <!-- Tarjeta 3 -->
 
                     <div class="gramaje-group"
                         data-gramos="9"
-                        data-price="900">
+                        data-price="900"
+                        data-quantity="0">
 
-                        <button class="gramaje-btn" data-action="minus" type="button">−</button>
+                        <button
+                            class="gramaje-btn"
+                            data-action="minus"
+                            type="button">
+                            -
+                        </button>
 
                         <span class="gramaje-chip">
-                            9 g × $900.00
+                            9 G x $900.00
                         </span>
 
-                        <button class="gramaje-btn" data-action="plus" type="button">+</button>
+                        <button
+                            class="gramaje-btn"
+                            data-action="plus"
+                            type="button">
+                            +
+                        </button>
 
                     </div>
 
-                    <span class=" ingredient-chip item-extras" data-price="500">1/2 Oz</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Guacamole</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Chorizo</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Jalapeños</span>
-                    <span class="ingredient-chip item-extras" data-price="0">Pepinillos</span>
                   </div>
                 </div>
                 <!-- Item 2 -->
                 <div class="list-group-item bg-transparent text-white border-secondary mb-3">
                   <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">Cheese</span>
-                    <span class="badge bg-rosa rounded-pill">$85.00</span>
+                    <span class="fw">Mimosa</span>
                   </div>
                   <div class="d-flex align-items-center mt-2 gap-3">
                     <div class="input-group input-group-sm " style="width: 120px;">
@@ -853,86 +874,179 @@ CORPORATE DESIGN</h1>
                     </div>
                     <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Comentarios Adicionales...">
                   </div>
-                  <div class="contenedor-btns ingredient-chips" data-type="burger">
-                    <div class="ingredient-group" data-ingredient="Carne" data-price="35">
-                      <button class="carne-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Carne</span>
-                      <button class="carne-ctrl" data-action="plus" type="button">+</button>
+                  <div class="contenedor-btns ingredient-chips" data-type="flores-dispo">
+                    <!-- Tarjeta 1 -->
+                    <div class="gramaje-group"
+                        data-gramos="3"
+                        data-price="100"
+                        data-quantity="0">
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="minus"
+                            type="button">
+                            -
+                        </button>
+
+                        <span class="gramaje-chip">
+                            3 G x $100.00
+                        </span>
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="plus"
+                            type="button">
+                            +
+                        </button>
+
                     </div>
-                    <div class="ingredient-group" data-ingredient="Queso Daisy" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Queso Daisy</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="gramaje-group"
+                      data-gramos="7"
+                      data-price="200"
+                      data-quantity="0">
+
+                      <button
+                          class="gramaje-btn"
+                          data-action="minus"
+                          type="button">
+                          -
+                      </button>
+
+                      <span class="gramaje-chip">
+                          7 G x $200.00
+                      </span>
+
+                      <button
+                          class="gramaje-btn"
+                          data-action="plus"
+                          type="button">
+                          +
+                      </button>
+                  </div>
+
+                  <!-- Tarjeta 3 -->
+
+                    <div class="gramaje-group"
+                        data-gramos="9"
+                        data-price="900"
+                        data-quantity="0">
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="minus"
+                            type="button">
+                            -
+                        </button>
+
+                        <span class="gramaje-chip">
+                            9 G x $900.00
+                        </span>
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="plus"
+                            type="button">
+                            +
+                        </button>
+
                     </div>
-                    <div class="ingredient-group" data-ingredient="Queso Gouda" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Queso Gouda</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Jamón" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Jamón</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Tocino" data-price="25">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Tocino</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <span class="ingredient-chip item-extras" data-price="10">Piña</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Guacamole</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Chorizo</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Jalapeños</span>
-                    
-                    <span class="ingredient-chip item-extras" data-price="0">Pepinillos</span>
+
                   </div>
                 </div>
                 <!-- Item 3 -->
                 <div class="list-group-item bg-transparent text-white border-secondary mb-3">
                   <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">Hawaiana</span>
+                    <span class="fw">Tropical Z</span>
                     <span class="badge bg-rosa rounded-pill">$90.00</span>
                   </div>
                   <div class="d-flex align-items-center mt-2 gap-3">
                     <div class="input-group input-group-sm" style="width: 150px;">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
+
                       <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="90" data-name="Hawaiana">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
                     </div>
                     <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Comentarios Adicionales...">
                   </div>
-                  <div class="contenedor-btns ingredient-chips" data-type="burger">
-                    <div class="ingredient-group" data-ingredient="Carne" data-price="35">
-                      <button class="carne-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Carne</span>
-                      <button class="carne-ctrl" data-action="plus" type="button">+</button>
+                  <div class="contenedor-btns ingredient-chips" data-type="flores-dispo">
+                    <!-- Tarjeta 1 -->
+                    <div class="gramaje-group"
+                        data-gramos="3"
+                        data-price="100"
+                        data-quantity="0">
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="minus"
+                            type="button">
+                            -
+                        </button>
+
+                        <span class="gramaje-chip">
+                            3 G x $100.00
+                        </span>
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="plus"
+                            type="button">
+                            +
+                        </button>
+
                     </div>
-                    <div class="ingredient-group" data-ingredient="Queso Daisy" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Queso Daisy</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="gramaje-group"
+                      data-gramos="7"
+                      data-price="200"
+                      data-quantity="0">
+
+                      <button
+                          class="gramaje-btn"
+                          data-action="minus"
+                          type="button">
+                          -
+                      </button>
+
+                      <span class="gramaje-chip">
+                          7 G x $200.00
+                      </span>
+
+                      <button
+                          class="gramaje-btn"
+                          data-action="plus"
+                          type="button">
+                          +
+                      </button>
+                  </div>
+
+                  <!-- Tarjeta 3 -->
+
+                    <div class="gramaje-group"
+                        data-gramos="9"
+                        data-price="900"
+                        data-quantity="0">
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="minus"
+                            type="button">
+                            -
+                        </button>
+
+                        <span class="gramaje-chip">
+                            9 G x $900.00
+                        </span>
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="plus"
+                            type="button">
+                            +
+                        </button>
+
                     </div>
-                    <div class="ingredient-group" data-ingredient="Queso Gouda" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Queso Gouda</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Jamón" data-price="15">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Jamón</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <div class="ingredient-group" data-ingredient="Tocino" data-price="25">
-                      <button class="chip-ctrl" data-action="minus" type="button">-</button>
-                      <span class="ingredient-chip">Tocino</span>
-                      <button class="chip-ctrl" data-action="plus" type="button">+</button>
-                    </div>
-                    <span class="ingredient-chip item-extras" data-price="10">Piña</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Guacamole</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Chorizo</span>
-                    <span class="ingredient-chip item-extras" data-price="10">Jalapeños</span>
-                    
-                    <span class="ingredient-chip item-extras" data-price="0">Pepinillos</span>
+
                   </div>
                 </div>
                 
@@ -947,38 +1061,98 @@ CORPORATE DESIGN</h1>
                 <div class="list-group-item bg-transparent text-white border-secondary mb-3">
                   <div class="d-flex justify-content-between align-items-center">
                     <span class="fw">Lemon Frost</span>
-                    <span class="badge bg-rosa rounded-pill">$65.00</span>
                   </div>
                   <div class="d-flex align-items-center mt-2 gap-3">
                     <div class="input-group input-group-sm" style="width: 150px;">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="minus">-</button>
                       <input type="number" class="form-control btn-border-rosa text-white text-center qty-input" value="0" min="0" data-price="65" data-name="Papas Fritas">
-                      <button class="btn btn-border-rosa qty-btn" type="button" data-action="plus">+</button>
                     </div>
                     <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Preferencias...">
                   </div>
-                  <div class="ingredient-chips" data-type="dip">
-                    <div class="ingredient-group aderezo-group" data-ingredient="Ranch" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Oz</span>
+                  <div class="contenedor-btns ingredient-chips" data-type="flores-dispo">
+                    <!-- Tarjeta 1 -->
+                    <div class="gramaje-group"
+                        data-gramos="3"
+                        data-price="100"
+                        data-quantity="0">
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="minus"
+                            type="button">
+                            -
+                        </button>
+
+                        <span class="gramaje-chip">
+                            3 G x $100.00
+                        </span>
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="plus"
+                            type="button">
+                            +
+                        </button>
+
                     </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="Buffalo" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Buffalo</span>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="gramaje-group"
+                      data-gramos="7"
+                      data-price="200"
+                      data-quantity="0">
+
+                      <button
+                          class="gramaje-btn"
+                          data-action="minus"
+                          type="button">
+                          -
+                      </button>
+
+                      <span class="gramaje-chip">
+                          7 G x $200.00
+                      </span>
+
+                      <button
+                          class="gramaje-btn"
+                          data-action="plus"
+                          type="button">
+                          +
+                      </button>
+                  </div>
+
+                  <!-- Tarjeta 3 -->
+
+                    <div class="gramaje-group"
+                        data-gramos="9"
+                        data-price="900"
+                        data-quantity="0">
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="minus"
+                            type="button">
+                            -
+                        </button>
+
+                        <span class="gramaje-chip">
+                            9 G x $900.00
+                        </span>
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="plus"
+                            type="button">
+                            +
+                        </button>
+
                     </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="Ajo Habanero" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Ajo Habanero</span>
-                    </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="Chipotle" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Chipotle</span>
-                    </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="BBQ" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">BBQ</span>
-                    </div>
+
                   </div>
                 </div>
                 <!-- Item 2 -->
                 <div class="list-group-item bg-transparent text-white border-secondary mb-3">
                   <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">Aros de Cebolla</span>
+                    <span class="fw">Mimosa</span>
                     <span class="badge bg-rosa rounded-pill">$65.00</span>
                   </div>
                   <div class="d-flex align-items-center mt-2 gap-3">
@@ -989,28 +1163,91 @@ CORPORATE DESIGN</h1>
                     </div>
                     <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Preferencias...">
                   </div>
-                  <div class="ingredient-chips" data-type="dip">
-                    <div class="ingredient-group aderezo-group" data-ingredient="Ranch" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Ranch</span>
+                  <div class="contenedor-btns ingredient-chips" data-type="flores-dispo">
+                    <!-- Tarjeta 1 -->
+                    <div class="gramaje-group"
+                        data-gramos="3"
+                        data-price="100"
+                        data-quantity="0">
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="minus"
+                            type="button">
+                            -
+                        </button>
+
+                        <span class="gramaje-chip">
+                            3 G x $100.00
+                        </span>
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="plus"
+                            type="button">
+                            +
+                        </button>
+
                     </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="Buffalo" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Buffalo</span>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="gramaje-group"
+                      data-gramos="7"
+                      data-price="200"
+                      data-quantity="0">
+
+                      <button
+                          class="gramaje-btn"
+                          data-action="minus"
+                          type="button">
+                          -
+                      </button>
+
+                      <span class="gramaje-chip">
+                          7 G x $200.00
+                      </span>
+
+                      <button
+                          class="gramaje-btn"
+                          data-action="plus"
+                          type="button">
+                          +
+                      </button>
+                  </div>
+
+                  <!-- Tarjeta 3 -->
+
+                    <div class="gramaje-group"
+                        data-gramos="9"
+                        data-price="900"
+                        data-quantity="0">
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="minus"
+                            type="button">
+                            -
+                        </button>
+
+                        <span class="gramaje-chip">
+                            9 G x $900.00
+                        </span>
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="plus"
+                            type="button">
+                            +
+                        </button>
+
                     </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="Ajo Habanero" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Ajo Habanero</span>
-                    </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="Chipotle" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">Chipotle</span>
-                    </div>
-                    <div class="ingredient-group aderezo-group" data-ingredient="BBQ" data-price="0">
-                      <span class="ingredient-chip aderezo-chip">BBQ</span>
-                    </div>
+
                   </div>
                 </div>
                 <!-- Item 3 -->
                 <div class="list-group-item bg-transparent text-white border-secondary mb-3">
                   <div class="d-flex justify-content-between align-items-center">
-                    <span class="fw">Papas Gajo</span>
+                    <span class="fw">Tropical Z</span>
                     <span class="badge bg-rosa rounded-pill">$75.00</span>
                   </div>
                   <div class="d-flex align-items-center mt-2 gap-3">
@@ -1021,22 +1258,85 @@ CORPORATE DESIGN</h1>
                     </div>
                     <input type="text" class="form-control form-control-sm bg-dark text-white border-secondary item-extras" placeholder="Preferencias...">
                   </div>
-                      <div class="ingredient-chips" data-type="dip">
-                      <div class="ingredient-group aderezo-group" data-ingredient="Ranch" data-price="0">
-                        <span class="ingredient-chip aderezo-chip">Ranch</span>
-                      </div>
-                      <div class="ingredient-group aderezo-group" data-ingredient="Buffalo" data-price="0">
-                        <span class="ingredient-chip aderezo-chip">Buffalo</span>
-                      </div>
-                      <div class="ingredient-group aderezo-group" data-ingredient="Ajo Habanero" data-price="0">
-                        <span class="ingredient-chip aderezo-chip">Ajo Habanero</span>
-                      </div>
-                      <div class="ingredient-group aderezo-group" data-ingredient="Chipotle" data-price="0">
-                        <span class="ingredient-chip aderezo-chip">Chipotle</span>
-                      </div>
-                      <div class="ingredient-group aderezo-group" data-ingredient="BBQ" data-price="0">
-                        <span class="ingredient-chip aderezo-chip">BBQ</span>
-                      </div>
+                      <div class="contenedor-btns ingredient-chips" data-type="flores-dispo">
+                    <!-- Tarjeta 1 -->
+                    <div class="gramaje-group"
+                        data-gramos="3"
+                        data-price="100"
+                        data-quantity="0">
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="minus"
+                            type="button">
+                            -
+                        </button>
+
+                        <span class="gramaje-chip">
+                            3 G x $100.00
+                        </span>
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="plus"
+                            type="button">
+                            +
+                        </button>
+
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="gramaje-group"
+                      data-gramos="7"
+                      data-price="200"
+                      data-quantity="0">
+
+                      <button
+                          class="gramaje-btn"
+                          data-action="minus"
+                          type="button">
+                          -
+                      </button>
+
+                      <span class="gramaje-chip">
+                          7 G x $200.00
+                      </span>
+
+                      <button
+                          class="gramaje-btn"
+                          data-action="plus"
+                          type="button">
+                          +
+                      </button>
+                  </div>
+
+                  <!-- Tarjeta 3 -->
+
+                    <div class="gramaje-group"
+                        data-gramos="9"
+                        data-price="900"
+                        data-quantity="0">
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="minus"
+                            type="button">
+                            -
+                        </button>
+
+                        <span class="gramaje-chip">
+                            9 G x $900.00
+                        </span>
+
+                        <button
+                            class="gramaje-btn"
+                            data-action="plus"
+                            type="button">
+                            +
+                        </button>
+
+                    </div>
+
                   </div>
                 </div>
                 </div>
@@ -1098,7 +1398,7 @@ CORPORATE DESIGN</h1>
     </div>
   </div>
 
-  <!-- Footer de la web -->
+  <!-- Offcanvas Hide de la web -->
   <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Flamingo Ubicación</h5>
@@ -1115,9 +1415,9 @@ CORPORATE DESIGN</h1>
 </div> 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script defer src="https://unpkg.com/@blossom-carousel/web/dist/blossom-carousel-web.umd.js"></script>  
-<script src="js/respnsv.js"></script>
-<script src="js/pedidos.js"></script>
+<script defer src="https://unpkg.com/@blossom-carousel/web/dist/blossom-carousel-web.umd.js"></script>
+
+<script src="js/pedido.js"></script>
   <script src="js/modalView.js"></script>
   <script src="js/request.js"></script>
   <script src="js/ubiUser.js"></script>

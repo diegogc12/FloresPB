@@ -1,8 +1,18 @@
 #Ignoro carpeta de Fotos
-pics/
+./pics/
 
 #Ignoro Fuentes Fuentes
 fonts/
 
 # Ignoro Ejecución por parte de .vscode
 -vscode/
+
+# Ignora archivos que no se quieren cargar 
+# en Github
+
+js/pedidos.js
+
+ubi.html
+
+cards.html
+

@@ -616,7 +616,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (
                     !nombre ||
-                    !telefono ||
                     !calle ||
                     !entreCalles ||
                     !referencia
@@ -633,7 +632,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 /*
                 Validar teléfono
-                */
+                
 
                 if (!/^\d{10}$/.test(telefono)) {
 
@@ -644,7 +643,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     return;
 
                 }
-
+                */
 
                 /*
                 Agregar información
@@ -688,7 +687,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
             window.open(
-                `https://wa.me/5219871161465?text=${encodedMessage}`,
+                `https://wa.me/5219871137033?text=${encodedMessage}`,
                 "_blank"
             );
 

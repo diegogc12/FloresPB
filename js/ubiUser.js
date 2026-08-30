@@ -79,3 +79,9 @@ function mostrarMapa2(lat, lng) {
     }
 
 }
+
+document.querySelectorAll("*").forEach(el => {
+    if (el.scrollWidth > document.documentElement.clientWidth) {
+        console.log(el, el.scrollWidth);
+    }
+});

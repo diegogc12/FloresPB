@@ -5,8 +5,10 @@ document.getElementById("btnUbicacion").addEventListener("click", () => {
         const lat = pos.coords.latitude;
         const lng = pos.coords.longitude;
 
+        const ubi = `${lat},${lng}`;
+
         // Guardar en el campo oculto del formulario
-        document.getElementById("ubicacion").value = `${lat},${lng}`;
+        document.getElementById("ubicacion").value = ubi;
 
         // Actualizo el Mapa y Pongo un Marcador para Mostrar Ubicación de Usuario encontrada
         const map = document.getElementById("markermap");

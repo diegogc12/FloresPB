@@ -32,12 +32,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 formDomicilio.classList.add("d-none");
                 btnDomicilio.classList.remove("btn-rosa");
 
+                estadoUbi = "";
             } else {
 
                 metodoPedido = "Domicilio";
 
                 formDomicilio.classList.remove("d-none");
                 btnDomicilio.classList.add("btn-rosa");
+
+                estadoUbi = "manual";
+
             }
 
         });
@@ -659,106 +663,107 @@ if (
             ====================================================
             */
 
-            if (metodoPedido === "Domicilio" ) {
+            /*
+============================================================
+VALIDAR DOMICILIO
+============================================================
+*/
 
-                const nombre =
-                    document.getElementById(
-                        "nombreDom"
-                    )?.value.trim();
+if (metodoPedido === "Domicilio") {
 
+    /*
+    ========================================================
+    OPCIÓN MANUAL
+    ========================================================
+    */
 
-                const telefono =
-                    document.getElementById(
-                        "telefonoDom"
-                    )?.value.trim();
+    if (estadoUbi === "manual") {
 
+        const calle =
+            document.getElementById("calleDom")
+            ?.value.trim();
 
-                const calle =
-                    document.getElementById(
-                        "calleDom"
-                    )?.value.trim();
+        const entreCalles =
+            document.getElementById("direccionDom")
+            ?.value.trim();
 
-
-                const entreCalles =
-                    document.getElementById(
-                        "direccionDom"
-                    )?.value.trim();
-
-
-                const referencia =
-                    document.getElementById(
-                        "referenciaDom"
-                    )?.value.trim();
+        const referencia =
+            document.getElementById("referenciaDomManual")
+            ?.value.trim();
 
 
-                /*
-                Validar datos
-                */
+        if (
+            !calle ||
+            !entreCalles ||
+            !referencia
+        ) {
 
-                if (
-                    !nombre ||
-                    !calle ||
-                    !entreCalles ||
-                    !referencia
-                ) {
+            alert(
+                "Completa Calle, Entre calles y Referencia."
+            );
 
-                    alert(
-                        "Por favor completa todos los datos del pedido a domicilio."
-                    );
+            return;
 
-                    return;
-
-                }
+        }
 
 
-                /*
-                Validar teléfono
-                
+        mensaje +=
+            "\n\nDirección:" +
+            `\nCalle: ${calle}` +
+            `\nEntre calles: ${entreCalles}` +
+            `\nReferencia: ${referencia}`;
 
-                if (!/^\d{10}$/.test(telefono)) {
-
-                    alert(
-                        "El teléfono debe tener exactamente 10 dígitos."
-                    );
-
-                    return;
-
-                }
-                */
-
-                /*
-                Agregar información
-                */
-
-                mensaje +=
-                    "\n\nEntrega a domicilio" +
-                    `\nNombre: ${nombre}` +
-                    `\nTeléfono: ${telefono}` +
-                    `\nCalle: ${calle}` +
-                    `\nEntre calles: ${entreCalles}` +
-                    `\nReferencia: ${referencia}`;
+    }
 
 
-                /*
-                Agregar ubicación GPS
-                */
+    /*
+    ========================================================
+    OPCIÓN COORDENADAS
+    ========================================================
+    */
 
-                const ubicacion =
-                    document.getElementById(
-                        "ubicacion"
-                    )?.value.trim();
+    else if (estadoUbi === "coords") {
 
-
-                if (ubicacion) {
-
-                    mensaje +=
-                        `\nUbicación: https://www.google.com/maps?q=${ubicacion}`;
-
-                }
-
-            }
+        const referencia =
+            document.getElementById("referenciaDomCoords")
+            ?.value.trim();
 
 
+        const ubicacion =
+            document.getElementById("ubicacion")
+            ?.value.trim();
+
+
+        if (!ubicacion) {
+
+            alert(
+                "Primero debes pulsar 'Usar mi ubicación'."
+            );
+
+            return;
+
+        }
+
+
+        if (!referencia) {
+
+            alert(
+                "Escribe una referencia para la entrega."
+            );
+
+            return;
+
+        }
+
+
+        mensaje +=
+            "\n\nUbicación:" +
+            `\nhttps://www.google.com/maps?q=${ubicacion}` +
+            `\nReferencia: ${referencia}`;
+
+    }
+
+}
             /*
             ENVIAR A WHATSAPP
             */

@@ -67,6 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 e.stopPropagation();
 
+                this
+
                 let cantidad =
                     parseInt(group.dataset.quantity) || 0;
 
@@ -74,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     this.dataset.action;
 
                 if (accion === "plus") {
+                
 
                     cantidad++;
 
@@ -82,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     cantidad = Math.max(0, cantidad - 1);
 
                 }
+
 
                 group.dataset.quantity = cantidad;
 
@@ -132,6 +136,34 @@ document.addEventListener('DOMContentLoaded', function () {
             `$${total.toFixed(2)}`;
 
     }
+
+    /*
+
+    Acutalizo Pedidos
+
+    */
+
+    function actualizarCantidadProducto(producto) {
+
+    let cantidadTotal = 0;
+
+    producto.querySelectorAll('.gramaje-group').forEach(gramaje => {
+
+        const cantidad =
+            parseInt(gramaje.dataset.quantity) || 0;
+
+        cantidadTotal += cantidad;
+    });
+
+    const qtyInput =
+        producto.querySelector('.qty-input');
+
+    if (qtyInput) {
+        qtyInput.value = cantidadTotal;
+    }
+
+    
+}
 
 
     /*

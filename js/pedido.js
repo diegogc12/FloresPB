@@ -43,6 +43,109 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     }
+/*
+    ============================================================
+    MÉTODO De DATOS de UBICACIÓN
+    ============================================================
+    
+
+    const btnManualUbi = document.getElementById("option1")
+    const btnUbiCoords = document.getElementById("option2")
+
+    const formManual = document.getElementById("formManual")
+    const formUbiCoords = document.getElementById("formUbiCoords")
+
+    let metodoDatos = "";
+
+    if (btnManualUbi && btnUbiCoords && formManual && formUbiCoords) {
+        btnManualUbi.addEventListener("click", function () {
+            // Click en Opción 1
+            if (metodoDatos === "Coords") {
+                // Si el método de Datos es Coordenadas desaparece
+                // y se muestra el formManual
+                metodoDatos = "Manual"
+
+                formUbiCoords.classList.add("d-none");
+                formManual.classList.remove("d-none");
+            }
+            
+        })
+
+        btnUbiCoords.addEventListener("click", function () {
+            // Click en Opción 2
+            if (metodoDatos === "Manual") {
+
+                metodoDatos = "Coords"
+
+                formManual.classList.add("d-none");
+                formUbiCoords.classList.remove("d-none");
+            }
+        })
+    }
+
+*/
+
+const btnManualUbi = document.getElementById("option1");
+const btnUbiCoords = document.getElementById("option2");
+
+const formManual = document.getElementById("formManual");
+const formUbiCoords = document.getElementById("formUbiCoords");
+
+let estadoUbi = "";
+
+
+if (
+    btnManualUbi &&
+    btnUbiCoords &&
+    formManual &&
+    formUbiCoords
+) {
+
+    function actualizarFormularioUbicacion() {
+
+        if (btnManualUbi.checked) {
+            estadoUbi = "manual";
+
+            // Mostrar formulario manual
+            formManual.classList.remove("d-none");
+
+            // Ocultar coordenadas
+            formUbiCoords.classList.add("d-none");
+
+        }
+
+        else if (btnUbiCoords.checked) {
+            estadoUbi = "coords"
+
+            // Ocultar formulario manual
+            formManual.classList.add("d-none");
+
+            // Mostrar coordenadas
+            formUbiCoords.classList.remove("d-none");
+
+        }
+
+    }
+
+
+    // Cambio del radio 1
+    btnManualUbi.addEventListener(
+        "change",
+        actualizarFormularioUbicacion
+    );
+
+
+    // Cambio del radio 2
+    btnUbiCoords.addEventListener(
+        "change",
+        actualizarFormularioUbicacion
+    );
+
+
+    // Ejecutar una vez al cargar
+    //actualizarFormularioUbicacion();
+
+}
 
 
     /*
@@ -421,107 +524,89 @@ document.addEventListener("DOMContentLoaded", function () {
             ====================================================
             */
 
-            productos.forEach(function (producto) {
+           productos.forEach(function (producto) {
 
-                /*
-                Obtener nombre
-                */
+    const nombreElemento =
+        producto.querySelector(".fw");
 
-                const nombreElemento =
-                    producto.querySelector(".fw");
+    if (!nombreElemento) {
+        return;
+    }
 
-
-                if (!nombreElemento) {
-                    return;
-                }
+    const nombre =
+        nombreElemento.innerText.trim();
 
 
-                const nombre =
-                    nombreElemento.innerText.trim();
+    /*
+    Obtener comentario del producto
+    */
+
+    const comentarioInput =
+        producto.querySelector(".item-extras");
+
+    const comentario =
+        comentarioInput
+            ? comentarioInput.value.trim()
+            : "";
 
 
-                /*
-                Buscar todas las presentaciones
-                */
+    /*
+    Obtener presentaciones
+    */
 
-                const presentaciones =
-                    producto.querySelectorAll(
-                        ".gramaje-group"
-                    );
+    const presentaciones =
+        producto.querySelectorAll(".gramaje-group");
 
 
-                /*
-                =================================================
-                RECORRER GRAMAJES
-                =================================================
-                */
+    presentaciones.forEach(function (grupo) {
 
-                presentaciones.forEach(function (grupo) {
-
-                    const cantidad =
-                        parseInt(
-                            grupo.dataset.quantity
-                        ) || 0;
+        const cantidad =
+            parseInt(grupo.dataset.quantity) || 0;
 
 
-                    /*
-                    Si cantidad = 0
-                    no se agrega al pedido
-                    */
-
-                    if (cantidad <= 0) {
-                        return;
-                    }
+        if (cantidad <= 0) {
+            return;
+        }
 
 
-                    /*
-                    Obtener gramaje
-                    */
-
-                    const gramos =
-                        grupo.dataset.gramos || "";
+        const gramos =
+            grupo.dataset.gramos || "";
 
 
-                    /*
-                    Obtener precio
-                    */
-
-                    const precio =
-                        parseFloat(
-                            grupo.dataset.price
-                        ) || 0;
+        const precio =
+            parseFloat(grupo.dataset.price) || 0;
 
 
-                    /*
-                    Subtotal
-                    */
-
-                    const subtotal =
-                        cantidad * precio;
+        const subtotal =
+            cantidad * precio;
 
 
-                    /*
-                    Sumar al total
-                    */
-
-                    total += subtotal;
+        total += subtotal;
 
 
-                    /*
-                    Agregar al pedido
+        /*
+        Crear detalle del producto
+        */
 
-                    Ejemplo:
+        let detalle =
+            `${cantidad}x ${nombre} - ${gramos} g = $${subtotal.toFixed(2)}`;
 
-                    2x Lemon Frost - 3 g = $200
-                    */
 
-                    orderSummary.push(
-                        `${cantidad}x ${nombre} - ${gramos} g = $${subtotal.toFixed(2)}`
-                    );
+        /*
+        Agregar comentario si existe
+        */
 
-                });
+        if (comentario) {
+            detalle +=
+                `\n   Comentario: ${comentario}`;
+        }
 
-            });
+
+        orderSummary.push(detalle);
+
+    });
+
+});
 
 
             /*
@@ -549,11 +634,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (metodoPedido === "") {
 
-                alert(
-                    "Por favor selecciona un método de pedido."
-                );
-
-                return;
+                
 
             }
 
@@ -565,7 +646,7 @@ document.addEventListener("DOMContentLoaded", function () {
             */
 
             let mensaje =
-                "Hola, buenas noches.\n\n" +
+                "Hola FloresPB.\n\n" +
                 "Quisiera ordenar:\n\n" +
                 orderSummary.join("\n") +
                 "\n\n" +
@@ -578,7 +659,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ====================================================
             */
 
-            if (metodoPedido === "Domicilio") {
+            if (metodoPedido === "Domicilio" ) {
 
                 const nombre =
                     document.getElementById(

@@ -512,7 +512,7 @@ border: 1px solid rgba(255, 255, 255, 0.35);
     }
     .btnform{
         font-size: medium;
-        color: #FF7B93;
+        color: #C59A45;
 
     }
    
@@ -759,6 +759,7 @@ border: 1px solid rgba(255, 255, 255, 0.35);
       flex-wrap: wrap;
       gap: 20px;
       text-align: center;
+      justify-self: flex-end;
     }
 
     .qty-input::-webkit-inner-spin-button,
@@ -890,6 +891,7 @@ border: 1px solid rgba(255, 255, 255, 0.35);
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
+        justify-self: flex-end;
       }
       .nav-button .btn {
         flex: 1 1 45%;
@@ -1003,6 +1005,7 @@ body {
 }
 
 
+
 /* Navbar */
 .navbar {
     width: 100%;
@@ -1039,6 +1042,10 @@ body {
    ========================================================= */
 
 @media (max-width: 1024px) {
+
+  #navbarNav{
+  background-color: #7c796b70;
+}
 
     .hero-text {
         max-width: 100%;

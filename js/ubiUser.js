@@ -8,8 +8,18 @@ document.getElementById("btnUbicacion").addEventListener("click", () => {
         // Guardar en el campo oculto del formulario
         document.getElementById("ubicacion").value = `${lat},${lng}`;
 
+        // Actualizo el Mapa y Pongo un Marcador para Mostrar Ubicación de Usuario encontrada
+        const map = document.getElementById("markermap");
+
+        map.position = { lat: lat, lng: lng};
+
+        // Actualizo Mapa hacia las coordenadas señaladas
+        const mapBig = document.getElementById("map");
+
+        mapBig.center = { lat: lat, lng: lng};
+        mapBig.setAttribute("zoom", "10");
+
         alert("Ubicación capturada correctamente");
-        mostrarMapa2(lat, lng);
       },
       (err) => {
         console.error("Error obteniendo ubicación:", err);

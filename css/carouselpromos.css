@@ -6,7 +6,7 @@
     --line-strong: #495149;
     --text: #f1f4ee;
     --muted: #9aa399;
-    --accent: #f06449;
+    --accent: #edc814;
     --accent-soft: #2b1d19;
     --radius-lg: 1.75rem;
     --radius-md: 1.1rem;
@@ -286,6 +286,41 @@
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
       }
+      
+
+     #dots {
+      padding-bottom: 10px;
+      display: flex;
+      flex-direction: row;
+
+      justify-content: center;
+      align-items: center;
+
+      gap: 10px;
+
+      width: 100%;
+     }
+
+      #dots span {
+        background-color: gold !important;
+        inline-size: 20px;
+        block-size: 20px;
+      }
+
+      :where([data-blossom-dot][aria-current=true] [data-blossom-dot-marker])
+ {
+    opacity: var(--blossom-dot-active-opacity, 0.50);
+}
+
+:where([data-blossom-dot-marker]) {
+    background: var(--blossom-dot-color, currentColor);
+    block-size: var(--blossom-dot-size, .625rem);
+    border-radius: var(--blossom-dot-radius, 50%);
+    display: block;
+    inline-size: var(--blossom-dot-size, .625rem);
+    opacity: var(--blossom-dot-opacity, 0.6);
+    transition: opacity .2s;
+}
 
       .portrait-slide {
         flex: 0 0 auto;
@@ -410,11 +445,20 @@
         width: 100%;
         height: min(68vh, 40rem);
         padding: 0.75rem;
-        overflow-x: clip !important;
+        overflow-x: hidden !important;
         overflow-y: auto !important;
         white-space: normal !important;
         scroll-snap-type: y mandatory;
-        touch-action: pan-x pinch-zoom;
+        touch-action: pan-y pinch-zoom;
+        
+        scroll-behavior: smooth;
+
+        touch-action: pan-y;
+
+        scrollbar-width: none;
+      }
+      .vertical-carousel::-webkit-scrollbar {
+      display: none;
       }
 
       .vertical-slide {
@@ -671,3 +715,81 @@
           transition-duration: 0.01ms !important;
         }
       }
+
+      .historicas-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+
+.vertical-carousel {
+   
+    height: 600px;
+
+    scroll-snap-type: block mandatory;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scroll-behavior: smooth;
+}
+
+
+.vertical-slide {
+    min-height: 100%;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+.vertical-slide img {
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+
+    object-fit: cover;
+}
+
+
+.historicas-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 180px;
+}
+
+
+.historicas-controls button {
+    width: 46px;
+    height: 46px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #C59A45;
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.historicas-controls button:hover {
+    transform: scale(1.1);
+    background: #000;
+}

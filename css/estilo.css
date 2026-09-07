@@ -1092,4 +1092,74 @@ body {
         padding-right: 20px;
     }
 
+
+
 }
+
+
+
+/* =========================================
+   CARRUSEL VERTICAL HISTÓRICAS
+   ========================================= */
+
+.carousel-shell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* Carrusel vertical */
+
+.vertical-carousel {
+    width: 100%;
+    max-width: 650px;
+    height: 650px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+}
+
+.vertical-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Slides */
+
+.vertical-slide {
+    width: 100%;
+    min-height: 100%;
+
+    scroll-snap-align: center;
+}
+
+
+/* =========================================
+   BLOSSOM DOTS
+   ========================================= */
+
+#dots {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+

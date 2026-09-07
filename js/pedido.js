@@ -773,7 +773,7 @@ if (metodoPedido === "Domicilio") {
 
 
             window.open(
-                `https://wa.me/5219871137033?text=${encodedMessage}`,
+                `https://wa.me/5219902333473?text=${encodedMessage}`,
                 "_blank"
             );
 
